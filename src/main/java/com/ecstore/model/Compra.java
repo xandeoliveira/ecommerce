@@ -6,11 +6,15 @@ public class Compra {
     private int id;
     private Timestamp dataHora;
     private int usuarioId;
+    private int produtoId;
+    private float valor;
 
-    public Compra(int id, Timestamp dataHora, int usuarioId) {
+    public Compra(int id, Timestamp dataHora, int usuarioId, int produtoId, float valor ) {
         this.id = id;
         this.dataHora = dataHora;
         this.usuarioId = usuarioId;
+        this.produtoId = produtoId;
+        this.valor = valor;
     }
 
     public Compra(Timestamp dataHora, int usuarioId) {
@@ -42,5 +46,21 @@ public class Compra {
 
 	public void setUsuarioId(int usuarioId) {
 		this.usuarioId = usuarioId;
+	}
+	
+	public int getProdutoId() {
+		return produtoId;
+	}
+
+	public void setProdutoId(int ProdutoId) {
+		this.produtoId = ProdutoId;
+	}
+	
+	public float getValor() {
+		return valor;
+	}
+
+	public void setValor(int ProdutoId) {
+		this.valor = ProdutoId;
 	}
 }

@@ -19,24 +19,24 @@ public class CarrinhoDAO {
     }
 
     public void create(Carrinho carrinho) throws SQLException {
-        String sql = "INSERT INTO Carrinho (compra_id, produto_id, quantidade) VALUES (?, ?, ?)";
+        String sql = "INSERT INTO Carrinho (usuario_id, produto_id, quantidade) VALUES (?, ?, ?)";
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
-            stmt.setInt(1, carrinho.getCompraId());
+            stmt.setInt(1, carrinho.getUsuarioId());
             stmt.setInt(2, carrinho.getProdutoId());
             stmt.setInt(3, carrinho.getQuantidade());
             stmt.executeUpdate();
         }
     }
 
-    public List<Carrinho> listByCompraId(int compraId) throws SQLException {
-        String sql = "SELECT * FROM Carrinho WHERE compra_id = ?";
+    public List<Carrinho> listByUsuarioId(int usuarioId) throws SQLException {
+        String sql = "SELECT * FROM Carrinho WHERE usuario_id = ?";
         List<Carrinho> carrinhos = new ArrayList<>();
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
-            stmt.setInt(1, compraId);
+            stmt.setInt(1, usuarioId);
             ResultSet rs = stmt.executeQuery();
             while (rs.next()) {
                 carrinhos.add(new Carrinho(
-                        rs.getInt("compra_id"),
+                        rs.getInt("usuario_id"),
                         rs.getInt("produto_id"),
                         rs.getInt("quantidade")
                 ));
@@ -45,10 +45,11 @@ public class CarrinhoDAO {
         return carrinhos;
     }
 
-    public void deleteByCompraId(int compraId) throws SQLException {
-        String sql = "DELETE FROM Carrinho WHERE compra_id = ?";
+    public void deleteProductByUserId(int usuarioId, int produtoId) throws SQLException {
+        String sql = "DELETE FROM Carrinho WHERE usuario_id = ? AND produto_id = ?";
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
-            stmt.setInt(1, compraId);
+        	stmt.setInt(1, usuarioId);
+            stmt.setInt(2, produtoId);
             stmt.executeUpdate();
         }
     }

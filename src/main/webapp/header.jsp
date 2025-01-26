@@ -10,9 +10,11 @@
     <link rel="shortcut icon" href="img/EC_Store_icon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/produtos.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/footer.css">
+   <link rel="stylesheet" href="css/carrinho.css">
 
     <script src="js/components/header.js"></script>
     <script src="js/components/footer.js"></script>
@@ -23,9 +25,9 @@
 	    <nav>
 	        <ul class="menu">
 	            <li><a href="/ecommerce/home">Início</a></li>
-	            <li><a href="/ecommerce/CarrinhoController">Carrinho</a></li>
-	            <li><a href="login.html">Login</a></li>
-	            <li><a href="cadastro.html">Cadastro</a></li>
+	            <li><a href="/ecommerce/carrinho">Carrinho</a></li>
+	            <li><a href="/ecommerce/login">Login</a></li>
+	            <li><a href="/ecommerce/cadastro">Cadastro</a></li>
 	        </ul>
 	    </nav>
         <form id="pesquisa" action="busca.html">

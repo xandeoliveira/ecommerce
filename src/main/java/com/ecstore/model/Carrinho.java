@@ -1,24 +1,40 @@
 package com.ecstore.model;
 
 public class Carrinho {
-    private int compraId;
+	private int id;
+    private int usuarioId;
     private int produtoId;
     private int quantidade;
 
-    public Carrinho(int compraId, int produtoId, int quantidade) {
-        this.compraId = compraId;
+    public Carrinho(int id, int usuarioId, int produtoId, int quantidade) {
+    	this.id = id;
+        this.usuarioId = usuarioId;
+        this.produtoId = produtoId;
+        this.quantidade = quantidade;
+    }
+    
+    public Carrinho(int usuarioId, int produtoId, int quantidade) {
+        this.usuarioId = usuarioId;
         this.produtoId = produtoId;
         this.quantidade = quantidade;
     }
 
     public Carrinho() {}
 
-	public int getCompraId() {
-		return compraId;
+	public int getId() {
+		return usuarioId;
 	}
 
-	public void setCompraId(int compraId) {
-		this.compraId = compraId;
+	public void setId(int id) {
+		this.id = id;
+	}
+    
+    public int getUsuarioId() {
+		return usuarioId;
+	}
+
+	public void setUsuarioId(int compraId) {
+		this.usuarioId = compraId;
 	}
 
 	public int getProdutoId() {
@@ -35,5 +51,9 @@ public class Carrinho {
 
 	public void setQuantidade(int quantidade) {
 		this.quantidade = quantidade;
+	}
+	
+	public float getSubtotal(float valorUnitario) {
+		return this.quantidade * valorUnitario;
 	}
 }

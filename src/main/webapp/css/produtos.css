@@ -1,5 +1,6 @@
 .container-produtos {
-    display: flex; 
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap; 
     justify-content: center;
     gap: 20px; 
@@ -29,7 +30,7 @@
     padding: 10px;
     cursor: pointer;
     border-radius: 5px;
-    width: 100%;
+    width: 200px !important;
 }
 
 .produto button:hover {
