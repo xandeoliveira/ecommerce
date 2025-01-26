@@ -19,11 +19,11 @@
 </head>
 <body>
 	<header>
-	    <img src="../img/logo.png" alt="ECStore logo">
+	    <img src="img/logo.png" alt="ECStore logo">
 	    <nav>
 	        <ul class="menu">
-	            <li><a href="index.html">Início</a></li>
-	            <li><a href="carrinho.html">Carrinho</a></li>
+	            <li><a href="/ecommerce/home">Início</a></li>
+	            <li><a href="/ecommerce/CarrinhoController">Carrinho</a></li>
 	            <li><a href="login.html">Login</a></li>
 	            <li><a href="cadastro.html">Cadastro</a></li>
 	        </ul>

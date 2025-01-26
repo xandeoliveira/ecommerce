@@ -5,21 +5,25 @@
 </jsp:include>
 
 <%
-	List<Produto> produtos = (List<Produto>) request.getAttribute("produtos"); 
+	List<Produto> produtos = (List<Produto>)request.getAttribute("produtos"); 
 %>
 
 <main>
     <h2>Produtos</h2>
     
     <%
+    if(produtos != null){
     	for(Produto produto : produtos){
     %>
     <div class="produto">
-	    <img src="" alt="<%=produto.getDescricao() %>">
+	    <img src="img/no_image.jpg" alt="<%=produto.getDescricao() %>">
 	    <p><strong><%=produto.getDescricao() %></strong></p>
 	    <p>R$ <%=produto.getPreco() %></p>
+	    <p>Restam <%=produto.getQuantidade() %></p>
 	    <button>Adicionar ao Carrinho</button>
 	</div>
+	<%}}else{%>
+		<h3>Sem produtos para listar.</h3>
 	<%} %>
     
 </main>

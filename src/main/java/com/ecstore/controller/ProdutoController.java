@@ -13,7 +13,7 @@ import java.util.List;
 import com.ecstore.dao.ProdutoDAO;
 import com.ecstore.model.Produto;
 
-@WebServlet(urlPatterns={"/","/index.jsp"})
+@WebServlet(urlPatterns={"/","/home","/index.jsp"})
 public class ProdutoController extends HttpServlet {
     private static final long serialVersionUID = 1L;
 

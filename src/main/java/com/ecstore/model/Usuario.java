@@ -16,6 +16,12 @@ public class Usuario {
         this.login = login;
         this.senha = senha;
     }
+    
+    public Usuario(String email, String nome, String endereco) {
+        this.email = email;
+        this.nome = nome;
+        this.endereco = endereco;
+    }
 
     public Usuario() {}
 

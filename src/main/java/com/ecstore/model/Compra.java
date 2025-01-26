@@ -13,6 +13,11 @@ public class Compra {
         this.usuarioId = usuarioId;
     }
 
+    public Compra(Timestamp dataHora, int usuarioId) {
+        this.dataHora = dataHora;
+        this.usuarioId = usuarioId;
+    }
+
     public Compra() {}
 
 	public int getId() {
